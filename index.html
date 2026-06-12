@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ocean-sky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Journey — Luxury Travel & Adventure Agency</title>
+  <meta name="description" content="Discover breathtaking travel destinations and customized holiday packages with Dream Journey. Your dream vacation starts here.">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: Outfit for body, Playfair Display for headers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- FIXED NAVIGATION BAR -->
+  <header class="header-nav" id="navbar">
+    <a href="#home" class="logo" id="navLogo">
+      <span class="logo-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="logo-text">Dream<span class="text-accent">Journey.</span></span>
+    </a>
+
+    <!-- Desktop Navigation links -->
+    <div class="nav-menu-container desktop-only">
+      <nav class="nav-links">
+        <div class="nav-indicator"></div>
+        <a href="#home" class="nav-link active-link">Home</a>
+        <a href="#destinations" class="nav-link">Destinations</a>
+        <a href="#packages" class="nav-link">Packages</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Right-side actions: Theme Switcher & CTA Button -->
+    <div class="nav-actions">
+      <!-- Dark/Light Theme Button -->
+      <button class="theme-toggle" id="themeToggler" aria-label="Switch theme (Ocean & Sky or Tropical Paradise)">
+        <!-- Ocean & Sky Icon -->
+        <svg class="ocean-sky-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="9" r="4" />
+          <path d="M12 2v2M4.93 4.93l1.41 1.41M20 9h2M17.66 14.66l1.41 1.41M2 9h2M6.34 14.66l-1.41 1.41" />
+          <path d="M2 18c1.5-1 3.5-1 5 0s3.5 1 5 0 3.5-1 5 0 3.5 1 5 0" />
+          <path d="M2 21c1.5-1 3.5-1 5 0s3.5 1 5 0 3.5-1 5 0 3.5 1 5 0" />
+        </svg>
+        <!-- Tropical Paradise Icon -->
+        <svg class="tropical-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22c-1-3-1-7 2-10M9 22c0-4 1-8 4-11" />
+          <path d="M13 11c-2-2-5-2-7-1 3-1 6 0 7 1zM13 11c0-3-2-5-4-6 1 2 2 5 4 6zM13 11c2-2 5-3 7-2-3 0-6 1-7 2zM13 11c2-1 4 1 5 3-1-2-4-2-5-1z" fill="currentColor"/>
+          <circle cx="18" cy="6" r="3" fill="currentColor" opacity="0.3"/>
+        </svg>
+      </button>
+
+      <!-- Nav CTA Button -->
+      <a href="#contact" class="btn-cta desktop-only">Book Now</a>
+
+      <!-- Responsive Mobile Hamburger Toggle -->
+      <button class="menu-btn" id="menuToggle" aria-label="Toggle mobile menu drawer">
+        <span class="menu-btn-bar"></span>
+        <span class="menu-btn-bar"></span>
+        <span class="menu-btn-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <nav class="mobile-nav-links">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#destinations" class="mobile-nav-link">Destinations</a>
+      <a href="#packages" class="mobile-nav-link">Packages</a>
+      <a href="#about" class="mobile-nav-link">About Us</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+    <div class="mobile-nav-actions">
+      <a href="#contact" class="btn-cta" style="text-align: center;">Book Now</a>
+    </div>
+  </aside>
+
+  <!-- Drawer Backdrop Overlay -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- MAIN LANDING PAGE CONTAINER -->
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-overlay"></div>
+      <!-- Premium Background Image -->
+      <div class="hero-bg-image"></div>
+      
+      <div class="section-container hero-container">
+        <div class="hero-content scroll-reveal fade-in-up">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Your Premier Travel Guide
+          </div>
+          <h1 class="hero-title">Crafting Journeys That <br><span class="text-gradient">Inspire The Soul</span></h1>
+          <p class="hero-description">
+            Escape the ordinary and experience extraordinary adventures designed tailored specifically for you. Explore iconic cities, sandy beaches, tropical escapes, and winter wonderlands.
+          </p>
+          <div class="hero-actions">
+            <a href="#packages" class="btn-primary">Book Now</a>
+            <a href="#destinations" class="btn-secondary">Explore Destinations</a>
+          </div>
+        </div>
+        
+        <!-- Hero Quick Stats / Trust Indicators -->
+        <div class="hero-stats scroll-reveal fade-in-up delay-2">
+          <div class="stat-item">
+            <span class="stat-number">12k+</span>
+            <span class="stat-label">Happy Travelers</span>
+          </div>
+          <div class="stat-item border-left">
+            <span class="stat-number">4.9</span>
+            <span class="stat-label">Customer Rating</span>
+          </div>
+          <div class="stat-item border-left">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Destinations</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bottom Wave Transition Divider -->
+      <div class="hero-wave-divider">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,96C80,90.7,240,80,400,80C560,80,720,90.7,880,96C1040,101.3,1200,101.3,1360,96C1400,94.7,1420,93.3,1440,92L1440,120L1420,120C1400,120,1360,120,1280,120C1120,120,960,120,800,120C640,120,480,120,320,120C160,120,80,120,40,120L0,120Z" fill="currentColor"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 2. DESTINATIONS SECTION -->
+    <section class="section-padding" id="destinations">
+      <div class="section-container">
+        <div class="section-header scroll-reveal fade-in-up">
+          <span class="section-subtitle">Exotic Escapes</span>
+          <h2 class="section-title">Popular Destinations</h2>
+          <p class="section-description">
+            Immerse yourself in new cultures, rich history, and stunning natural wonders. Here are the world's most sought-after travel locations.
+          </p>
+        </div>
+
+        <!-- 4-Column Responsive Grid -->
+        <div class="destinations-grid">
+          
+          <!-- Destination Card 1: Paris -->
+          <div class="dest-card scroll-reveal fade-in-up">
+            <div class="dest-img-container">
+              <img src="paris_tour.png" alt="Paris, France" class="dest-img" loading="lazy">
+              <span class="dest-price-tag">From $899</span>
+            </div>
+            <div class="dest-content">
+              <div class="dest-meta">
+                <span class="dest-tag">Europe</span>
+                <span class="dest-rating">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  4.8
+                </span>
+              </div>
+              <h3 class="dest-name">Paris</h3>
+              <p class="dest-desc">The city of love, fashion, exquisite culinary arts, and iconic landmarks like the Eiffel Tower.</p>
+            </div>
+          </div>
+
+          <!-- Destination Card 2: Bali -->
+          <div class="dest-card scroll-reveal fade-in-up delay-1">
+            <div class="dest-img-container">
+              <img src="bali_escape.png" alt="Bali, Indonesia" class="dest-img" loading="lazy">
+              <span class="dest-price-tag">From $749</span>
+            </div>
+            <div class="dest-content">
+              <div class="dest-meta">
+                <span class="dest-tag">Asia</span>
+                <span class="dest-rating">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  4.9
+                </span>
+              </div>
+              <h3 class="dest-name">Bali</h3>
+              <p class="dest-desc">A tropical paradise with beautiful sand beaches, volcanic mountains, and rich spiritual heritage.</p>
+            </div>
+          </div>
+
+          <!-- Destination Card 3: Dubai -->
+          <div class="dest-card scroll-reveal fade-in-up delay-2">
+            <div class="dest-img-container">
+              <img src="dubai_adventure.png" alt="Dubai, UAE" class="dest-img" loading="lazy">
+              <span class="dest-price-tag">From $999</span>
+            </div>
+            <div class="dest-content">
+              <div class="dest-meta">
+                <span class="dest-tag">Middle East</span>
+                <span class="dest-rating">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  4.7
+                </span>
+              </div>
+              <h3 class="dest-name">Dubai</h3>
+              <p class="dest-desc">Experience luxury shopping, modern sky-high architecture, and thrilling desert safaris.</p>
+            </div>
+          </div>
+
+          <!-- Destination Card 4: Switzerland -->
+          <div class="dest-card scroll-reveal fade-in-up delay-3">
+            <div class="dest-img-container">
+              <img src="swiss_alps.png" alt="Swiss Alps, Switzerland" class="dest-img" loading="lazy">
+              <span class="dest-price-tag">From $1,199</span>
+            </div>
+            <div class="dest-content">
+              <div class="dest-meta">
+                <span class="dest-tag">Europe</span>
+                <span class="dest-rating">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  4.9
+                </span>
+              </div>
+              <h3 class="dest-name">Switzerland</h3>
+              <p class="dest-desc">Breathtaking scenery with pristine blue lakes, cozy wooden cottages, and towering snowy mountain peaks.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TOUR PACKAGES SECTION -->
+    <section class="section-padding bg-alt" id="packages">
+      <div class="section-container">
+        <div class="section-header scroll-reveal fade-in-up">
+          <span class="section-subtitle">Curated Bundles</span>
+          <h2 class="section-title">Special Tour Packages</h2>
+          <p class="section-description">
+            Save more and travel stress-free with our all-inclusive plans. Find the perfect package tailored to match your pace and preferences.
+          </p>
+        </div>
+
+        <!-- 3-Column Responsive Grid -->
+        <div class="packages-grid">
+
+          <!-- Package Card 1: Paris Tour -->
+          <div class="package-card scroll-reveal fade-in-up">
+            <div class="pkg-img-wrap">
+              <img src="paris_tour.png" alt="Paris Romantic Tour" class="pkg-img" loading="lazy">
+              <span class="pkg-badge">Best Seller</span>
+            </div>
+            <div class="pkg-content">
+              <div class="pkg-timeline">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                5 Days / 4 Nights
+              </div>
+              <h3 class="pkg-title">Parisian Romance & Culture</h3>
+              <ul class="pkg-features">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  4-Star Hotel Accommodations
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  Guided Seine River Cruise
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  Louvre Museum Skip-the-Line Access
+                </li>
+              </ul>
+              <div class="pkg-footer">
+                <div class="pkg-price-box">
+                  <span class="pkg-price-lbl">Total Price</span>
+                  <span class="pkg-price-val">$899 <span class="price-suffix">/ person</span></span>
+                </div>
+                <a href="#contact" data-package="Parisian Romance & Culture" class="pkg-btn btn-view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Card 2: Bali Escape -->
+          <div class="package-card scroll-reveal fade-in-up delay-1">
+            <div class="pkg-img-wrap">
+              <img src="bali_escape.png" alt="Bali Beach Escape" class="pkg-img" loading="lazy">
+              <span class="pkg-badge badge-coral">Relaxation</span>
+            </div>
+            <div class="pkg-content">
+              <div class="pkg-timeline">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                7 Days / 6 Nights
+              </div>
+              <h3 class="pkg-title">Bali Tropical Island Escape</h3>
+              <ul class="pkg-features">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  Private Beachfront Villa Stay
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  Traditional Balinese Spa Package
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  Volcano Hiking & Temple Tour
+                </li>
+              </ul>
+              <div class="pkg-footer">
+                <div class="pkg-price-box">
+                  <span class="pkg-price-lbl">Total Price</span>
+                  <span class="pkg-price-val">$1,099 <span class="price-suffix">/ person</span></span>
+                </div>
+                <a href="#contact" data-package="Bali Tropical Island Escape" class="pkg-btn btn-view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Card 3: Dubai Adventure -->
+          <div class="package-card scroll-reveal fade-in-up delay-2">
+            <div class="pkg-img-wrap">
+              <img src="dubai_adventure.png" alt="Dubai City Adventure" class="pkg-img" loading="lazy">
+              <span class="pkg-badge badge-cyan">Adventure</span>
+            </div>
+            <div class="pkg-content">
+              <div class="pkg-timeline">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                4 Days / 3 Nights
+              </div>
+              <h3 class="pkg-title">Dubai Luxury Oasis Adventure</h3>
+              <ul class="pkg-features">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  High-rise City View Accommodations
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  Dune Bashing & Desert Camp BBQ
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  Burj Khalifa 124th Floor Ticket
+                </li>
+              </ul>
+              <div class="pkg-footer">
+                <div class="pkg-price-box">
+                  <span class="pkg-price-lbl">Total Price</span>
+                  <span class="pkg-price-val">$799 <span class="price-suffix">/ person</span></span>
+                </div>
+                <a href="#contact" data-package="Dubai Luxury Oasis Adventure" class="pkg-btn btn-view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ABOUT US SECTION -->
+    <section class="section-padding" id="about">
+      <div class="section-container">
+        <div class="about-wrapper">
+          
+          <!-- About Details & Message -->
+          <div class="about-text scroll-reveal fade-in-up">
+            <span class="section-subtitle">Our Mission</span>
+            <h2 class="section-title">We Facilitate Unforgettable Travel Journeys</h2>
+            <p class="about-desc">
+              For over a decade, Roamify has been the trusted companion for curious explorers searching for unique trails and memorable cultural experiences. We combine luxury comfort with local secrets to ensure your vacation is perfectly structured.
+            </p>
+            <p class="about-desc-secondary">
+              Our travel specialists design custom itineraries that let you avoid standard tourist traps. We value sustainable, eco-friendly tourism practices that benefit regional communities.
+            </p>
+            
+            <div class="about-features">
+              <div class="ab-feat-item">
+                <div class="ab-feat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 22V12m0 0l-4 4m4-4l4 4" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <h4 class="ab-feat-title">Tailored Travel Plans</h4>
+                  <p class="ab-feat-desc">Every trip customized matching your style, speed, and desired activities.</p>
+                </div>
+              </div>
+              
+              <div class="ab-feat-item">
+                <div class="ab-feat-icon icon-gold">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div>
+                  <h4 class="ab-feat-title">Secure & Trusted Bookings</h4>
+                  <p class="ab-feat-desc">100% secure payments, flexible cancellations, and official travel insurance protection.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- About Graphics / Interactive Layout -->
+          <div class="about-graphics scroll-reveal fade-in-up delay-1">
+            <div class="graphic-card">
+              <img src="about_landscape.png" alt="Beautiful landscape backdrop" class="graphic-img">
+              
+              <!-- Absolute Stats Floating badge -->
+              <div class="floating-stat-badge">
+                <div class="floating-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3"/></svg>
+                </div>
+                <div>
+                  <span class="f-stat-number">99.2%</span>
+                  <span class="f-stat-label">Satisfaction Rate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT US SECTION -->
+    <section class="section-padding bg-alt" id="contact">
+      <div class="section-container">
+        <div class="section-header scroll-reveal fade-in-up">
+          <span class="section-subtitle">Reach Out</span>
+          <h2 class="section-title">Start Planning Your Dream Trip</h2>
+          <p class="section-description">
+            Have questions about a package or need help customizing an itinerary? Our expert travel advisors are ready to design your path.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Left info container -->
+          <div class="contact-details scroll-reveal fade-in-up">
+            <h3 class="contact-sub-title">Contact Information</h3>
+            <p class="contact-intro">Feel free to visit our main corporate agency office, call us directly, or send an email query.</p>
+            
+            <div class="contact-info-list">
+              <!-- Item 1 -->
+              <div class="contact-info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4 class="info-title">Head Office Location</h4>
+                  <p class="info-desc">105 Ocean Boulevard, Suite 300, Miami, FL 33101</p>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="contact-info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h4 class="info-title">Direct Helpline Number</h4>
+                  <p class="info-desc">+1 (800) 246-8025 / +1 (305) 555-0199</p>
+                </div>
+              </div>
+              <!-- Item 3 -->
+              <div class="contact-info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <h4 class="info-title">Support Email Address</h4>
+                  <p class="info-desc">advisors@dreamjourney-travel.com / support@dreamjourney.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right form container -->
+          <div class="contact-form-card scroll-reveal fade-in-up delay-1">
+            <form id="contact-form" class="contact-form" autocomplete="on">
+              
+              <div class="form-status" id="form-status"></div>
+
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-input" placeholder=" " required autocomplete="name">
+                <label for="name" class="form-label">Full Name</label>
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="form-input" placeholder=" " required autocomplete="email">
+                <label for="email" class="form-label">Email Address</label>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="subject" name="subject" class="form-input" placeholder=" " required autocomplete="off">
+                <label for="subject" class="form-label">Desired Tour/Destination</label>
+              </div>
+
+              <div class="form-group">
+                <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
+                <label for="message" class="form-label">How can we customize your tour?</label>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn-cta btn-form">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PROFESSIONAL FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="logo-text">Dream<span class="text-accent">Journey.</span></span>
+        </a>
+        <p class="footer-tagline">Crafting memorable journeys and tropical escapes since 2014. Let's wander together.</p>
+      </div>
+
+      <div class="footer-nav-links">
+        <h4 class="footer-head">Quick Links</h4>
+        <div class="footer-links-grid">
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#destinations" class="footer-link">Destinations</a>
+          <a href="#packages" class="footer-link">Tour Packages</a>
+          <a href="#about" class="footer-link">About Us</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-social-section">
+        <h4 class="footer-head">Follow Our Journey</h4>
+        <div class="footer-socials">
+          <!-- Twitter -->
+          <a href="#" class="social-link" aria-label="Follow us on Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" class="social-link" aria-label="Follow us on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" class="social-link" aria-label="Follow us on Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- YouTube -->
+          <a href="#" class="social-link" aria-label="Subscribe to our YouTube channel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+      <span class="footer-copyright">&copy; 2026 Dream Journey Travel Agency. All rights reserved. Created for Prodigy InfoTech.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
